@@ -2,5 +2,15 @@
 // You should implement your task here.
 
 module.exports = function towelSort (matrix) {
-  return [];
+  //если не массив, то должно вернуть пустой 
+if(!matrix) {
+  return []
+}
+for(let i = 0; i < matrix.length; i++) {
+  if(i % 2 != 0) {
+   matrix[i].reverse()
+  }
+  }
+  //выводим все подмассивы на высший уровень
+  return matrix.flat(Infinity)
 }
